@@ -16,7 +16,7 @@ const Items = () => {
   const cart = useAppSelector((state) => state.cart);
 
   const handleAddToCart = (item: ItemType) => {
-    dispatch(addProduct({ payload: item }));
+    dispatch(addProduct(item));
     console.log(cart);
   };
 
