@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  background-color: #f9f9f9;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+`;
+
 export const Header = styled.header`
+  background-color: #f9f9f9;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
-  margin: 0 auto;
   height: 60px;
 
   #cart {

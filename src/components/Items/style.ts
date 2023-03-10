@@ -34,7 +34,7 @@ export const Items = styled.div`
 
 export const ItemArea = styled.div`
   width: 300px;
-  height: 180px;
+  height: 200px;
   background-color: #ebe9ea;
   border-radius: 10px;
   margin: 0 25px;
@@ -42,6 +42,10 @@ export const ItemArea = styled.div`
 
 export const ItemImage = styled.img`
   width: 200px;
+`;
+
+export const ItemTitle = styled.h3`
+  text-align: center;
 `;
 
 export const Info = styled.div`

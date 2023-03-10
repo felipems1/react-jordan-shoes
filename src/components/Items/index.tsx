@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { addProduct } from "../../redux/reducers/cartReducer";
-import { useAppSelector } from "../../redux/hooks/useAppSelector";
+import { AddProduct } from "../../redux/reducers/cartReducer";
 import * as C from "./style";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BiChevronsLeft, BiChevronsRight } from "react-icons/bi";
@@ -13,11 +12,8 @@ const Items = () => {
 
   const dispatch = useDispatch();
 
-  const cart = useAppSelector((state) => state.cart);
-
   const handleAddToCart = (item: ItemType) => {
-    dispatch(addProduct(item));
-    console.log(cart);
+    dispatch(AddProduct(item));
   };
 
   const handleNext = (e: React.SyntheticEvent) => {
@@ -36,12 +32,13 @@ const Items = () => {
     <C.Container>
       <C.Title>Destaques</C.Title>
       <C.Description>
-        Frete grátis e chinelo de brinde é aqui, aproveite por tempo limitado.{" "}
+        Frete grátis e chinelo de brinde é aqui, aproveite por tempo limitado.
       </C.Description>
       <C.Items ref={carousel}>
         {items.map((item, index) => (
           <C.ItemArea key={index}>
             <C.ItemImage src={item.image} />
+            <C.ItemTitle>{item.title}</C.ItemTitle>
             <C.Info>
               <C.Price>R$ {item.price.toFixed(2)}</C.Price>
               <C.Cart onClick={() => handleAddToCart(item)}>

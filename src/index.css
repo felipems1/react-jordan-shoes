@@ -6,11 +6,12 @@
 }
 
 body {
-  background-image: #f9f9f9;
+  background-color: #ccc;
   overflow-x: hidden;
 }
 
-button {
+button,
+svg {
   cursor: pointer;
 }
 

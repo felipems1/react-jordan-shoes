@@ -21,10 +21,18 @@ export const Container = styled.div`
 export const Title = styled.h2`
   margin-left: 100px;
   font-size: 30px;
+
+  @media (max-width: 428px) {
+    margin-left: 20px;
+  }
 `;
 
 export const Description = styled.p`
   margin-top: 20px;
   margin-left: 100px;
   line-height: 25px;
+
+  @media (max-width: 428px) {
+    margin-left: 20px;
+  }
 `;
